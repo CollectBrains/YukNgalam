@@ -87,26 +87,14 @@ body
 	border-radius: 50px
 	margin-top: 50px
 	overflow: hidden
+	transition: all .4s
 	span
 		position: relative
 		z-index: 2
 	&:hover, &:focus
 		text-decoration: none
 		color: #10273d
-	&::before
-		--size: 0
-		content: ''
-		position: absolute
-		left: var(--x)
-		top: var(--y)
-		width: var(--size)
-		height: var(--size)
-		background: radial-gradient(circle closest-side, $accent, transparent)
-		transform: translate(-100%, -100%)
-		//transition: width .1s ease, height .1s ease
-	&:hover
-		&::before
-			--size: 200px
+		background-color: darken(#ffffa6, 5%)
 
 .text
 	color: #777777
@@ -189,12 +177,13 @@ body
 			visibility: visible
 
 .login
+	position: relative
 	color: #ffffff
 	transition: opacity .3s, top .3s
 	[class*='icon']
 		position: absolute
-		top: 16px
-		right: 5px
+		top: 0
+		right: -18px
 	img
 		border-radius: 50%
 	&:hover, &:focus
@@ -205,7 +194,7 @@ body
 .log-popup
 	position: absolute
 	top: -9999px
-	right: 0
+	right: 70px
 	margin-top: 30px
 	border-radius: 10px
 	width: 150px

@@ -5,13 +5,13 @@ $(function() {
 		$(this).toggleClass('active');
 	});
 
-	var btn = document.querySelector('.btn__top');
-	btn.onmousemove = function (e) {
-		var x = e.pageX - btn.offsetLeft;
-		var y = e.pageY - btn.offsetTop;
-		btn.style.setProperty('--x', x + 'px');
-		btn.style.setProperty('--y', y + 'px');
+	function heightDetect() {
+		$(".header").css("height", $(window).height());
 	};
+	heightDetect();
+	$(window).resize(function() {
+		heightDetect();
+	});
 
 	$('.tabs a').click(function(){
 		$(this).parents('.tab-wrap').find('.tab-cont').addClass('hide');

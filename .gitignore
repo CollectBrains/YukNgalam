@@ -1,5 +1,7 @@
 /node_modules/
 /dist/
+/.idea/
+/.psd/
 /.git/
 /app/css/
 /**/_backstage
