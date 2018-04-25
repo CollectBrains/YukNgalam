@@ -4,7 +4,9 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	/**/
+	.gallery-content
+		&__text
+			line-height: 1.2
 
 
 /* Medium Devices, Desktops */
@@ -14,6 +16,25 @@
 		padding-right: 20px
 		.log-popup
 			right: -8px
+
+	.gallery-content
+		padding: 10px
+		&__title
+			margin-top: 5px
+		&__text
+			font-size: 14px
+			line-height: 1.4
+
+	.treangle
+		&::before
+			display: none
+
+	.gallery-content__icon
+		width: 39px
+		height: 30px
+		&.left-icon
+			width: 39px
+			height: 30px
 
 
 /* Small Devices, Tablets */
@@ -31,6 +52,8 @@
 	.city-img
 		background-position: 50% 50%
 
+	.search
+		margin-bottom: 30px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -49,6 +72,19 @@
 
 	.text
 		font-size: 14px
+
+	.gallery-content
+		&__title
+			margin-top: 10px
+		&__text
+			display: none
+
+	.gallery-content__icon
+		width: 56px
+		height: 59px
+		&.left-icon
+			width: 56px
+			height: 59px
 
 
 /* Custom, iPhone Retina */
