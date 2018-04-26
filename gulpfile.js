@@ -18,7 +18,7 @@ var gulp           = require('gulp'),
 
 gulp.task('common-js', function() {
 	return gulp.src([
-		'app/js/common.js',
+		'app/js/common.js'
 		])
 	.pipe(concat('common.min.js'))
 	.pipe(uglify())
@@ -28,7 +28,10 @@ gulp.task('common-js', function() {
 gulp.task('js', ['common-js'], function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
-		'app/js/common.min.js', // Всегда в конце
+		'app/libs/sidebar/js/modernizr.custom.js',
+		'app/libs/sidebar/js/classie.js',
+		'app/libs/sidebar/js/sidebarEffects.js',
+		'app/js/common.min.js' // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
 	// .pipe(uglify()) // Минимизировать весь js (на выбор)
