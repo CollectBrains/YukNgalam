@@ -1,5 +1,11 @@
 $(function() {
 
+	$(".toggle-mnu").click(function() {
+		$(this).toggleClass("on");
+		$(".main-mnu").slideToggle();
+		return false;
+	});
+
 	$(".pag__item").on('click', function () {
 		$(".pag__item").removeClass('active');
 		$(this).toggleClass('active');

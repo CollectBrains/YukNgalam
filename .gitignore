@@ -1,7 +1,7 @@
 /node_modules/
 /dist/
 /.idea/
-/.psd/
+/*.psd/
 /.git/
 /app/css/
 /**/_backstage
